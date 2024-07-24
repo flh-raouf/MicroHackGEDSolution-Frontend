@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ArchiveMate
 
-## Getting Started
+I had the pleasure of participating with Dahmani Mohamed Tariq, Dalil Adimi, Jamyl Sid Mehdi Meziane in the second edition of #microhack, a hackathon organized by Micro Club USTHB. Among the two proposed themes, we chose to focus on optimizing electronic document management (GED). Our challenge, proposed by PROARCHIVE Solutions, was to explore key aspects of GED, identify problems, and address a specific issue. Our focus was on improving the document indexing and archiving process without needing to read the documents, named #ArchiveMate.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ArchiveMate is a solution designed to optimize the electronic management of documents by enhancing the indexing and archiving process. Our solution works as follows:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Document Intake**: The system accepts a document.
+2. **OCR Extraction**: The document is sent via API to an OCR (Optical Character Recognition) system, which extracts its content.
+3. **NLP Indexing**: Using an NLP (Natural Language Processing) model, the content is analyzed to determine appropriate search indexes for the document.
+4. **Archiving**: The document is then archived in the correct location based on the determined indexes.
+5. **Document Integrity**: To ensure document integrity, we hash the document and store the hash alongside it.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Future Enhancements
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+We plan to implement the following future improvements:
 
-## Learn More
+- **Blockchain Integration**: Implement a blockchain system to ensure the integrity of documents.
+- **LLM Model**: Develop a language model (LLM) to assist in the parameterization phase by taking an audit as input, extracting all processes that can help, and suggesting additional processes not covered in the audit.
+- **Access Control**: Improve access rights within a company, allowing for the display or concealment of information in a document based on access rights. For example, a director could see all information in a document, while a secretary could see only the necessary information based on their access level.
 
-To learn more about Next.js, take a look at the following resources:
+## Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **OCR System**: For extracting content from documents.
+- **NLP Model**: For determining appropriate search indexes.
+- **Hashing**: To ensure document integrity.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Acknowledgements
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you to the Micro Club USTHB for organizing the hackathon and to PROARCHIVE Solutions for presenting the challenge. Special thanks to my teammates for their dedication and hard work. Proud to be part of this project.
